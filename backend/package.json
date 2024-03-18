@@ -1,15 +1,17 @@
 {
-  "name": "backend",
+  "name": "vidwatch",
   "version": "1.0.0",
-  "description": "A huge backend project that can teach the most of Backend!",
+  "description": "a huge backend project which can cover most of the backend concepts by javascript!",
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "dev": "nodemon src/index.js"
+    "dev": "nodemon -r dotenv/config --experimental-json-modules src/index.js",
+    "start": "node  index.js"
   },
-  "author": "Abdul_Rehman",
+  "author": "abdulrehman",
   "license": "ISC",
   "dependencies": {
+    "dotenv": "^16.4.5",
     "express": "^4.18.3",
     "mongoose": "^8.2.2"
   },
