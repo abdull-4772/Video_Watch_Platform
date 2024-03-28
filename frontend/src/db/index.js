@@ -1,3 +1,4 @@
+
 import mongoose from "mongoose";
 import { DB_NAME } from "../constants.js";
 
@@ -7,12 +8,12 @@ const connectDB = async () => {
       `${process.env.MONGODB_URI}/${DB_NAME}`
     );
     console.log(
-      "MONGODB connection with ATLAS successfull!! ",
-      connectionInstance.connections.host
+      "MONGODB connected successfully  !! ",
+      connectionInstance.connection.host
     );
   } catch (error) {
-    console.log("mongoDB connection error !!" , error);
-    process.exit(1)
+    console.log("mongoDB error", error);
+    process.exit(1);
   }
 };
 
